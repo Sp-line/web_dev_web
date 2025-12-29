@@ -1,0 +1,33 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "edit": "Edit",
+    "delete": "Delete",
+    "create": "Create",
+    "save": "Save",
+    "back": "Back"
+  },
+  "teams": {
+    "title": "Teams",
+    "create_button": "Create Team",
+    "no_project": "No Project",
+    "teamlead_prefix": "Teamlead:",
+    "confirm_delete": "Are you sure?",
+    "load_error": "Error loading teams",
+    "delete_error": "Failed to delete",
+    "total": "Total:",
+    "detail_title": "Team: {name}",
+    "project_label": "Project:",
+    "teamlead_label": "Teamlead:",
+    "no_teamlead": "None",
+    "members_title": "Team Members",
+    "create_title": "Create Team",
+    "edit_title": "Edit Team"
+  },
+  "form": {
+    "name": "Name",
+    "project_id": "Project ID",
+    "teamlead_id": "Teamlead ID",
+    "save_error": "Error saving"
+  }
+}

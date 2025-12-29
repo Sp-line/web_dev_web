@@ -1,10 +1,10 @@
 <template>
   <div class="container my-4">
-    <h2>{{ isEdit ? "Редагувати" : "Створити" }} команду</h2>
+    <h2>{{ isEdit ? $t('teams.edit_title') : $t('teams.create_title') }}</h2>
 
     <form @submit.prevent="submit">
       <div class="mb-3">
-        <label class="form-label">Назва</label>
+        <label class="form-label">{{ $t('form.name') }}</label>
         <input
             type="text"
             v-model="form.name"
@@ -14,7 +14,7 @@
       </div>
 
       <div class="mb-3">
-        <label class="form-label">Проєкт ID</label>
+        <label class="form-label">{{ $t('form.project_id') }}</label>
         <input
             type="number"
             v-model.number="form.project_id"
@@ -23,7 +23,7 @@
       </div>
 
       <div class="mb-3">
-        <label class="form-label">Teamlead ID</label>
+        <label class="form-label">{{ $t('form.teamlead_id') }}</label>
         <input
             type="number"
             v-model.number="form.teamlead_id"
@@ -32,9 +32,9 @@
       </div>
 
       <button type="submit" class="btn btn-success">
-        {{ isEdit ? "Зберегти" : "Створити" }}
+        {{ isEdit ? $t('common.save') : $t('common.create') }}
       </button>
-      <router-link to="/teams" class="btn btn-secondary ms-2">Назад</router-link>
+      <router-link to="/teams" class="btn btn-secondary ms-2">{{ $t('common.back') }}</router-link>
     </form>
   </div>
 </template>
@@ -44,9 +44,11 @@ import { ref, onMounted } from "vue";
 import { createTeam, updateTeam, retrieveTeam } from "../api/teams";
 import { useRoute, useRouter } from "vue-router";
 import type { TeamCreate, TeamUpdate, TeamDetailResponse } from "../api/types";
+import { useI18n } from 'vue-i18n'
 
 const route = useRoute();
 const router = useRouter();
+const { t } = useI18n()
 
 const isEdit = !!route.params.id;
 
@@ -73,7 +75,8 @@ async function submit() {
     await router.push("/teams");
   } catch (e) {
     console.error(e);
-    alert("Помилка при збереженні");
+    // ВИКОРИСТОВУЄМО t() ДЛЯ ПОВІДОМЛЕНЬ
+    alert(t("form.save_error"));
   }
 }
 </script>

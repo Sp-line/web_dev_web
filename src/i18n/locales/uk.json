@@ -1,0 +1,33 @@
+{
+  "common": {
+    "loading": "Завантаження...",
+    "edit": "Редагувати",
+    "delete": "Видалити",
+    "create": "Створити",
+    "save": "Зберегти",
+    "back": "Назад"
+  },
+  "teams": {
+    "title": "Команди",
+    "create_button": "Створити команду",
+    "no_project": "Без проєкту",
+    "teamlead_prefix": "Керівник:",
+    "confirm_delete": "Впевнені?",
+    "load_error": "Помилка при завантаженні команд",
+    "delete_error": "Не вдалося видалити",
+    "total": "Всього:",
+    "detail_title": "Команда: {name}",
+    "project_label": "Проєкт:",
+    "teamlead_label": "Керівник:",
+    "no_teamlead": "Немає",
+    "members_title": "Члени команди",
+    "create_title": "Створити команду",
+    "edit_title": "Редагувати команду"
+  },
+  "form": {
+    "name": "Назва",
+    "project_id": "Проєкт ID",
+    "teamlead_id": "Teamlead ID",
+    "save_error": "Помилка при збереженні"
+  }
+}
